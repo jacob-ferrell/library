@@ -22,13 +22,17 @@ submit.addEventListener('click', function() {
     console.log(library)
 });
 
-function Book(title, author, pages, read, ind) {
+class Book {
+    constructor(title, author, pages, read, ind) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
     this.ind = ind;
-    
+    }
+    toggleReadStatus() {
+        this.read = !this.read;
+    }
 }
 function createBookElement(book) {
     const container = document.createElement('div')
@@ -69,6 +73,4 @@ function capitalize(word) {
     word[0] = word[0].toUpperCase();
     return word.join('');
 }
-Book.prototype.toggleReadStatus = function() {
-    this.read = !this.read;
-}
+
