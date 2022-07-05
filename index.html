@@ -19,12 +19,12 @@
     </button>New Book</div>
     <div class="book-container"></div>
     <div class="form-popup">
-        <form>
+        <form onsubmit="return false;">
             <div class="title"><input type="text" id="title" name="title" placeholder="Title" required></div>
             <div class="author"><input type="text" id="author" name="author" placeholder="Author" required></div>
             <div class="pages"><input type="number" id="pages" name="pages" placeholder="Pages" required></div>
             <div class = "read"><label for="read">Has been read?</label><input type="checkbox" id="read" name="been-read"></div>
-            <button type="submit" class="submit">Add Book</button>
+            <button type="submit" class="submit" >Add Book</button>
         </form>
         
     </div>

@@ -2,12 +2,13 @@ let library = [];
 const add = document.querySelector('.add');
 const addBook = document.getElementById('add-book');
 const submit = document.querySelector('.submit');
+const form = document.querySelector('form');
 const popup = document.querySelector('.form-popup');
 const bookContainer = document.querySelector('.book-container');
 addBook.addEventListener('click', function() {
     popup.style.display = "flex";
 });
-submit.addEventListener('click', function() {
+form.addEventListener('submit', ()=> {
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
